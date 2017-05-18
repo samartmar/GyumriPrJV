@@ -1,6 +1,10 @@
 'use strict';
-function speake()
+const speak = function()
 {
-  console.log("Hello");
+  const arr = ['foo' , 'bar' , 'baz'];
+  for(const i of arr)
+  {
+    console.log(i.toUpperCase());
+  }
 }
-speake();
+speak();
