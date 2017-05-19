@@ -1,6 +1,8 @@
 'use strict'
 
 const http = require('http');
+const p = require('./ports');
+
 
 const server = http.createServer((req , res) => {
   if(req.url === '/'){
@@ -8,7 +10,9 @@ const server = http.createServer((req , res) => {
     res.end(`
       <!doctype html>
       <body>
-        <h1>some header</h1>
+        <h1>${p.upper(__dirname)}</h1>
+
+        <h3> ${p.up(__dirname)}</h3>
         <p> what a body =P </p>
         </body>
 
