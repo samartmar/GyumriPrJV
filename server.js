@@ -1,7 +1,8 @@
 'use strict'
 
 const http = require('http');
-const p = require('./ports');
+const {PORT , upper} = require('./ports');
+const [a,b] = [1, 2];
 
 
 const server = http.createServer((req , res) => {
@@ -10,9 +11,8 @@ const server = http.createServer((req , res) => {
     res.end(`
       <!doctype html>
       <body>
-        <h1>${p.upper(__dirname)}</h1>
+        <h1>${upper(__dirname)}</h1>
 
-        <h3> ${p.up(__dirname)}</h3>
         <p> what a body =P </p>
         </body>
 
@@ -21,4 +21,4 @@ const server = http.createServer((req , res) => {
         res.end('UNKNOWN')
       }
 })
-server.listen(8000,() => console.log("Started you server"));
+server.listen(PORT,() => console.log("Started you server"));
