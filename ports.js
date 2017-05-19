@@ -3,14 +3,13 @@
 const upper = (str) => {
   return str.toUpperCase();
 }
-const up = (str) =>{
-  return str.toUpperCase()
 
-}
-
+const PORT = 8000;
 
 module.exports = {
-  upper, up 
+  upper,
+  PORT,
+  something: 5
 
 
 }
